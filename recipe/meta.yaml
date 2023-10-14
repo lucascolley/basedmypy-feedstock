@@ -1,5 +1,5 @@
 {% set name = "basedmypy" %}
-{% set version = "2.2.0" %}
+{% set version = "2.2.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/basedmypy-{{ version }}.tar.gz
-  sha256: 5a8c2179ebd8952da080411125ef264e63ac34d583b47432a3f79493ee66b8d1
+  sha256: b0b2c582a3bd64fa25bcd1f4aaeba94819b2f25bc8be656ffde584e43e83ca7b
 
 build:
   noarch: python
