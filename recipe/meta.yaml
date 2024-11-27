@@ -18,7 +18,7 @@ build:
     - dmypy=mypy.dmypy.client:console_entry
     - mypyc=mypyc.__main__:main
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
@@ -31,8 +31,6 @@ requirements:
     - tomli >=1.1.0
     - types-psutil
     - types-setuptools
-    - mypy
-    - mypyc
     - pip
   run:
     - python >=3.8
@@ -40,19 +38,17 @@ requirements:
     - typing-extensions >=4.1.0
     - mypy_extensions >=1.0.0
     - tomli >=1.1.0
-    - mypyc
 
 test:
   imports:
     - mypy
-    - mypyc
   commands:
     - pip check
     - mypy --help
     - stubgen --help
     - stubtest --help
     - dmypy --help
-    - mypyc --help
+    - mypy --version
   requires:
     - pip
 
