@@ -1,5 +1,5 @@
 {% set name = "basedmypy" %}
-{% set version = "2.7.0" %}
+{% set version = "2.8.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/basedmypy-{{ version }}.tar.gz
-  sha256: a8ff08c667d8ca06c6ab5acd574e683b557ce64671b2a0e0c2503979f1186411
+  sha256: 5ca42099197d042d69a487ea0075f1baff3d60570ee3fca688f8484ec9584e56
 
 build:
   noarch: python
@@ -18,7 +18,7 @@ build:
     - dmypy=mypy.dmypy.client:console_entry
     - mypyc=mypyc.__main__:main
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
 
 requirements:
   host:
